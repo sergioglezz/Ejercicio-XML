@@ -1,0 +1,12 @@
+p {
+    counter-increment: verso;
+}
+
+br {
+    counter-increment: estrofa;
+    counter-reset: verso;
+}
+  
+p::before {
+	content: counter(estrofa) "." counter(verso)" - ";
+}
